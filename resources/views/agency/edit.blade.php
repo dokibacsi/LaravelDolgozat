@@ -5,13 +5,7 @@
     <input type='text' name='country' placeholder='Hely'>
     <select name='agency_id' placeholder='AgencyID'>
         @foreach ($users as $user)
-            <option value="${$users->id}" {{$users ->id == }}>
-
-
-
-
-
-
-
-
+        <option value="${$users->id}" {{$users ->id == $agencies -> user_id ? 'selected' : ''}}>{{$user->name}}</option>
+        @endforeach
+    </select>
 </form>
